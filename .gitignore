@@ -1,0 +1,11 @@
+.venv/
+
+reports/
+
+*.docx
+
+--pycache__/
+
+cache/
+
+

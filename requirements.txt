@@ -1,0 +1,8 @@
+
+qdrant-client>=1.15,<2
+streamlit>=1.38,<2
+sentence-transformers>=3.0,<6
+numpy>=1.26,<3
+pandas>=2.2,<3
+plotly>=5.20,<7
+requests>=2.32,<3

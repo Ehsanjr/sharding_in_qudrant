@@ -1,0 +1,26 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.20.0
+    container_name: qdrant-shard-benchmark
+
+    command:
+      - "./qdrant"
+      - "--uri"
+      - "http://qdrant:6335"
+
+    environment:
+      QDRANT__CLUSTER__ENABLED: "true"
+
+    ports:
+      - "127.0.0.1:6333:6333"
+
+    expose:
+      - "6335"
+
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+    restart: unless-stopped
+
+volumes:
+  qdrant_data:
